@@ -9,16 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api")
 public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/")
+    @GetMapping("getUser")
     public String getUser(){
         return "get User Details";
     }
 
-    @PostMapping("/createUser")
+    @PostMapping("createUser")
     public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails ){
 
         UserRest userRest = new UserRest();
@@ -32,12 +33,12 @@ public class UserController {
         return userRest;
     }
 
-    @PutMapping("/updateUser")
+    @PutMapping("updateUser")
     public String updateUser(){
         return "get User Details";
     }
 
-    @DeleteMapping("/deleteUser")
+    @DeleteMapping("deleteUser")
     public String deleteUser(){
         return "get User Details";
     }

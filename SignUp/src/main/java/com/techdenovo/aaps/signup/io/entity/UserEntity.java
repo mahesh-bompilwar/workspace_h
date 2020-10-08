@@ -1,38 +1,38 @@
 package com.techdenovo.aaps.signup.io.entity;
 
 import java.io.Serializable;
-//import javax.persistence.Column;
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-//@Entity(name="users")
+@Entity(name="users")
 public class UserEntity implements Serializable {
 
     private static final long serialVersionID = 6786677676354627653L;
 
-//    @Id
-//    @GeneratedValue
+    @Id
+    @GeneratedValue
     private long id;
 
-//    @Column(nullable=false)
+    @Column(nullable=false)
     private String userId;
 
-//    @Column(nullable=false, length=50)
+    @Column(nullable=false, length=50)
     private String firstName;
 
-//    @Column(nullable=false, length=50)
+    @Column(nullable=false, length=50)
     private String lastName;
 
-//    @Column(nullable=false, length=100)
+    @Column(nullable=false, length=100)
     private String email;
 
-//    @Column(nullable=false)
+    @Column(nullable=false)
     private String encryptedPassword;
 
     private String emailVerificationToken;
 
-//    @Column(nullable=false)
+    @Column(nullable=false)
     private Boolean emailVerificationStatus=false;
 
     public long getId() {
